@@ -1,16 +1,23 @@
 package com.pluralsight;
 
 public class SemiTruck extends Vehicles {
-    private int breakingDistance;
+    private int brakingDistance;
     private String trailerType;
     private boolean sleeperCab;
 
-    public int getBreakingDistance() {
-        return breakingDistance;
+    public SemiTruck(String tractionMechanic, String color, String cargoType, String engineType, int speed, int fuelLevel, int fuelCapacity, int numberOfPassengers, int cargoCapacity, double damagePercentage, double playerHealthAddition, int brakingDistance, String trailerType, boolean sleeperCab) {
+        super(tractionMechanic, color, cargoType, engineType, speed, fuelLevel, fuelCapacity, numberOfPassengers, cargoCapacity, damagePercentage, playerHealthAddition);
+        this.brakingDistance = brakingDistance;
+        this.trailerType = trailerType;
+        this.sleeperCab = sleeperCab;
     }
 
-    public void setBreakingDistance(int breakingDistance) {
-        this.breakingDistance = breakingDistance;
+    public int getBrakingDistance() {
+        return brakingDistance;
+    }
+
+    public void setBrakingDistance(int breakingDistance) {
+        this.brakingDistance = breakingDistance;
     }
 
     public String getTrailerType() {

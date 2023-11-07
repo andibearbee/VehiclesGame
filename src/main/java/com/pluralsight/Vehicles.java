@@ -1,23 +1,32 @@
 package com.pluralsight;
 
 public class Vehicles {
-    private String engineType;
 
+    //traction is the wheels, fan, rocket
+    protected String tractionMechanic, color, cargoType, engineType;
+    protected int speed, fuelLevel, fuelCapacity, numberOfPassengers, cargoCapacity;
+    //numOfPass is equivalent to carrierCapacity
 
-    private String tractionMechanic; //this is the wheels, fan, rocket
-    private String color;
-    private int speed;
-    private int fuelLevel;
-    private int fuelCapacity;
-    private int numberOfPassengers; //equivalent to carrierCapacity
-    private int cargoCapacity;
-    private String cargoType;
 
     //vehicle durability stats
-    private double damagePercentage;
-    private double playerHealthAddition;
+    protected double damagePercentage, playerHealthAddition;
+
+    public Vehicles(String tractionMechanic, String color, String cargoType, String engineType, int speed, int fuelLevel, int fuelCapacity, int numberOfPassengers, int cargoCapacity, double damagePercentage, double playerHealthAddition) {
+        this.tractionMechanic = tractionMechanic;
+        this.color = color;
+        this.cargoType = cargoType;
+        this.engineType = engineType;
+        this.speed = speed;
+        this.fuelLevel = fuelLevel;
+        this.fuelCapacity = fuelCapacity;
+        this.numberOfPassengers = numberOfPassengers;
+        this.cargoCapacity = cargoCapacity;
+        this.damagePercentage = damagePercentage;
+        this.playerHealthAddition = playerHealthAddition;
+    }
 
     public String getEngineType() {
+
         return engineType;
     }
 
